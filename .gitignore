@@ -1,0 +1,6 @@
+.env
+.vscode/settings.json
+dags/__pycache__
+/mnt/c/Users/DELL/Desktop/runs_docker/logs
+/mnt/c/Users/DELL/Desktop/runs_docker/plugins
+/mnt/c/Users/DELL/Desktop/runs_docker/venv
