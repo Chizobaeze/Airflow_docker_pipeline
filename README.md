@@ -13,13 +13,10 @@ Pipeline Structure
 
 Running Airflow with Docker
 
-Accessing the Airflow Web UI
-
 Example Pipeline Tasks
 
 Notes
 
-License
 
 # Overview
 This project demonstrates how to:
@@ -103,3 +100,24 @@ Dockerfile: Contains instructions to create a custom Docker image with Airflow i
 docker-compose.yml: Defines how Airflow components (Web Server, Scheduler, Workers, etc.) are set up in Docker.
 
 Each task is defined as a Python operator in Airflow, and the tasks are orchestrated using Python code.
+
+Running Airflow with Docker
+After building the Docker containers with docker-compose up --build, follow these steps:
+
+
+# Example Pipeline Tasks
+Here are the brief descriptions of the tasks in the pipeline:
+
+1. Fetch Data:
+This task makes an HTTP request to an API (e.g., randomuser.me) to fetch random user data and stores it in a Pandas DataFrame.
+
+2. Process Data:
+This task processes and cleans the data from the API response. For example, it might clean names, format addresses, or remove unwanted fields.
+
+3. Store Data:
+After the data is processed, this task uploads it to a destination, such as an AWS S3 bucket. This can be done using libraries like boto3 or awswrangler.
+
+Notes
+Make sure to replace the AWS credentials and region in the .env file with your actual AWS details.
+The Docker environment is set up to run with Airflow's LocalExecutor by default. If you're deploying to Kubernetes or another environment, you may need to adjust the executor configuration.
+The docker-compose.yml file is pre-configured for development. For production, you should customize it based on your infrastructure.
