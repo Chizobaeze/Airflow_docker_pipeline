@@ -69,13 +69,12 @@ Create a .env file in the project root to store your sensitive credentials and c
 bash
 Copy
 Edit
-# .env file example
 
+
+# .env file example
 AWS_ACCESS_KEY_ID=your_aws_access_key
 AWS_SECRET_ACCESS_KEY=your_aws_secret_key
 AWS_REGION=us-eu-central-1
-AIRFLOW__CORE__EXECUTOR=LocalExecutor
-This file will be loaded by the Python script to authenticate and configure the AWS connection. Ensure you do not commit this file to version control (it should be added to .gitignore).
 
 3. Build the Docker Containers
 We use Docker Compose to set up the Airflow containers. The repository contains a docker-compose.yml file, which defines the Airflow web server, scheduler, and worker.
@@ -88,7 +87,7 @@ Edit
 docker-compose up --build
 This will build and start all necessary containers for the Airflow environment.
 
-Pipeline Structure
+# Pipeline Structure
 DAG Definition
 The pipeline consists of an Airflow DAG defined in the dags/ directory. The DAG includes several tasks that can be executed in parallel or sequentially. Here's an overview of the DAG's tasks:
 
@@ -97,5 +96,10 @@ Fetch Data: Makes a request to the external API to retrieve random user data.
 Process Data: Cleans and processes the retrieved data.
 
 Store Data: Uploads the processed data to AWS S3.
+
+# Docker Configuration
+Dockerfile: Contains instructions to create a custom Docker image with Airflow installed and the necessary Python dependencies.
+
+docker-compose.yml: Defines how Airflow components (Web Server, Scheduler, Workers, etc.) are set up in Docker.
 
 Each task is defined as a Python operator in Airflow, and the tasks are orchestrated using Python code.
