@@ -48,29 +48,11 @@ Airflow version 2.8.0
 
 An active AWS account if using AWS services.
 
-Optional
-Docker Compose to simplify managing the Airflow containers.
-
-Installation
-1. Clone the Repository
-Clone the repository to your local machine:
-
-bash
-Copy
-Edit
-git clone https://github.com/your-username/airflow-pipeline.git
-cd airflow-pipeline
-2. Set Up Environment Variables
-Create a .env file in the project root to store your sensitive credentials and configurations:
-
-bash
-Copy
-Edit
-
-
 # .env file example
 AWS_ACCESS_KEY_ID=your_aws_access_key
+
 AWS_SECRET_ACCESS_KEY=your_aws_secret_key
+
 AWS_REGION=us-eu-central-1
 
 3. Build the Docker Containers
