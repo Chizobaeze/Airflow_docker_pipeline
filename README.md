@@ -42,9 +42,9 @@ To run this pipeline, you need the following:
 
 Docker installed on your system.
 
-Python 3.x installed.
+Python 3.9 installed.
 
-Airflow version 2.x.
+Airflow version 2.8.0
 
 An active AWS account if using AWS services.
 
