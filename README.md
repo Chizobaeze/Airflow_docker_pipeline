@@ -117,7 +117,7 @@ This task processes and cleans the data from the API response. For example, it m
 3. Store Data:
 After the data is processed, this task uploads it to a destination, such as an AWS S3 bucket. This can be done using libraries like boto3 or awswrangler.
 
-https://github.com/Chizobaeze/Airflow_docker_pipeline/blob/main/IMG_4830.JPG?raw=true
+![Image Alt](https://github.com/Chizobaeze/Airflow_docker_pipeline/blob/main/IMG_4830.JPG?raw=true)
 
 Notes
 Make sure to replace the AWS credentials and region in the .env file with your actual AWS details.
